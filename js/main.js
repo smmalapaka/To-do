@@ -8,6 +8,6 @@ require.config({
         angular:{
             exports: 'angular'
         }
-    },
-    deps:['app']
+    }
+    
 });

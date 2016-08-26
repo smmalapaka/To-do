@@ -1,17 +1,17 @@
 'use strict';
-angular.module('angular-app').directive("todoEscape",['$scope', function($scope){
+angular.module('angular-app').directive("todoEscape", function(){
 var ESCAPE_KEY=27;
-return function($scope, elem, attrs){
+return function(scope, elem, attrs){
     elem.bind('keydown', function(event){
 if(event.keyCode === ESCAPE_KEY){
-    $scope.$apply(attrs.todoEscape);
+    scope.$apply(attrs.todoEscape);
 }
     });
-    $scope.on('$destroy', function(){
+    scope.$on('$destroy', function(){
 elem.unbind('keydown');
     });
 };
-}]);
+});
 
 
 
