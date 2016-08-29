@@ -25,7 +25,7 @@ $scope.location  = $location;
 $scope.$watch('location.path()', function (path) {
 $scope.statusFilter = (path === '/active') ?
 { completed: false } : (path === '/completed') ?
-{ completed: true } : null;
+{ completed: true } : '';
 });
 $scope.addTodo= function(){
     var newTodo = $scope.newTodo.trim();
